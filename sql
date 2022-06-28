@@ -27,3 +27,7 @@ CREATE TABLE pagamento(
     parcelas VARCHAR(200),
     id_pag int
     );
+
+ALTER TABLE entrega ADD FOREIGN key(id_user) REFERENCES cliente(id);
+
+ALTER TABLE pagamento ADD FOREIGN key(id_pag) REFERENCES cliente(id);
